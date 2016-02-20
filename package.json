@@ -1,0 +1,26 @@
+{
+    "name": "spa-component-button",
+    "version": "1.3.0",
+    "description": "Base button implementation.",
+    "author": {
+        "name": "Stanislav Kalashnik",
+        "email": "darkpark.main@gmail.com"
+    },
+    "repository": "spasdk/component-button",
+    "scripts": {
+        "lint": "eslint *.js",
+        "jsdoc": "jsdoc --destination doc *.js readme.md"
+    },
+    "dependencies": {
+        "spa-component": "spasdk/component"
+    },
+    "keywords": [
+        "spa",
+        "spasdk",
+        "framework",
+        "visual",
+        "component",
+        "button"
+    ],
+    "license": "GPL-3.0"
+}

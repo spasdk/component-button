@@ -8,8 +8,7 @@
 
 'use strict';
 
-var Component = require('../component'),
-    keys      = require('../keys');
+var Component = require('spa-component');
 
 
 /**
@@ -119,7 +118,8 @@ Button.prototype.defaultEvents = {
      * @param {Event} event generated event
      */
     keydown: function ( event ) {
-        if ( event.code === keys.ok ) {
+        // enter
+        if ( event.keyCode === 13 ) {
             // emulate click
             // there are some listeners
             if ( this.events['click'] ) {
@@ -136,12 +136,6 @@ Button.prototype.defaultEvents = {
         }
     }
 };
-
-
-if ( DEBUG ) {
-    // expose to the global scope
-    window.ComponentButton = Button;
-}
 
 
 // public

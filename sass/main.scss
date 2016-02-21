@@ -4,7 +4,7 @@
 /* spa-component-button: production */
 
 .component.button {
-    background-color: #002042;
+    background-color: #dde9ff;
     display:          inline-table;
     height:           $buttonHeight;
     //line-height:      unit(@buttonHeight, px);
@@ -12,15 +12,15 @@
     cursor:           pointer;
 
     &:hover {
-        background-color: #005b9c;
+        background-color: #bbd3ff;
     }
 
     &.focus {
-        background-color: #005b9c;
+        background-color: #bbd3ff;
     }
 
     &.click {
-        background-color: #0073c4;
+        background-color: #a8c9ff;
     }
 
     .icon {

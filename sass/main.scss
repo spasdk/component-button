@@ -5,7 +5,7 @@
 .component.button {
     background-color: #dde9ff;
     display:          inline-table;
-    height:           $buttonHeight;
+    height:           $height;
     //line-height:      unit(@buttonHeight, px);
     //vertical-align:   middle;
     cursor:           pointer;
@@ -23,8 +23,8 @@
     }
 
     .icon {
-        height:     $buttonHeight;
-        width:      $buttonHeight;
+        height:     $height;
+        width:      $height;
         display:    table-cell;
         background: no-repeat center center;
     }
@@ -32,7 +32,7 @@
     .text {
         display:        table-cell;
         //width: 100%;
-        padding:        $buttonPaddingY $buttonPaddingX;
+        padding:        $paddingY $paddingX;
         vertical-align: middle;
         text-align:     center;
 

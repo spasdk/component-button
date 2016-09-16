@@ -1,48 +1,14 @@
 // @license The MIT License (MIT)
 // @copyright Stanislav Kalashnik <darkpark.main@gmail.com>
 
-/* spa-component-button: release */
-.component.button {
-    background-color: #dde9ff;
-    display:          inline-table;
-    height:           $height;
-    //line-height:      unit(@buttonHeight, px);
-    //vertical-align:   middle;
-    cursor:           pointer;
+@import "../node_modules/spa-component/sass/main";
+@import "body";
 
-    &:hover {
-        background-color: #bbd3ff;
-    }
+.spa-component-button {
+    @include spa-component-release;
+    @include spa-component-button;
 
-    &.focus {
-        background-color: #bbd3ff;
-    }
-
-    &.click {
-        background-color: #a8c9ff;
-    }
-
-    .icon {
-        height:     $height;
-        width:      $height;
-        display:    table-cell;
-        background: no-repeat center center;
-    }
-
-    .text {
-        display:        table-cell;
-        //width: 100%;
-        padding:        $paddingY $paddingX;
-        vertical-align: middle;
-        text-align:     center;
-
-        &:empty {
-            padding: 0;
-        }
-
-        // correct space between icon and text
-        //&:not(:only-child) {
-        //    padding-left: 0;
-        //}
+    @if $DEVELOP {
+        @include spa-component-develop;
     }
 }

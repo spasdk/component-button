@@ -1,0 +1,39 @@
+// @license The MIT License (MIT)
+// @copyright Stanislav Kalashnik <darkpark.main@gmail.com>
+
+@mixin spa-component-button {
+    background-color: #dde9ff;
+    display:          inline-table;
+    height:           $height;
+    cursor:           pointer;
+
+    &:hover {
+        background-color: #bbd3ff;
+    }
+
+    &.focus {
+        background-color: #bbd3ff;
+    }
+
+    &.click {
+        background-color: #a8c9ff;
+    }
+
+    .icon {
+        height:     $height;
+        width:      $height;
+        display:    table-cell;
+        background: no-repeat center center;
+    }
+
+    .text {
+        display:        table-cell;
+        padding:        $paddingY $paddingX;
+        vertical-align: middle;
+        text-align:     center;
+
+        &:empty {
+            padding: 0;
+        }
+    }
+}

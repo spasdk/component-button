@@ -51,7 +51,7 @@ function Button ( config ) {
     config = config || {};
 
     console.assert(typeof this === 'object', 'must be constructed via new');
-    
+
     if ( DEVELOP ) {
         if ( typeof config !== 'object' ) { throw new Error(__filename + ': wrong config type'); }
         // init parameters checks
@@ -60,8 +60,10 @@ function Button ( config ) {
         if ( config.value     && typeof config.value     !== 'string' ) { throw new Error(__filename + ': wrong or empty config.value'); }
     }
 
+    //config.name = 'spa-component-button' + (config.className || '');
+
     // set default className if classList property empty or undefined
-    config.className = 'button ' + (config.className || '');
+    //config.className = this.name + ' ' + (config.className || '');
 
     // parent constructor call
     Component.call(this, config);
@@ -87,6 +89,9 @@ function Button ( config ) {
 // inheritance
 Button.prototype = Object.create(Component.prototype);
 Button.prototype.constructor = Button;
+
+// set component name
+Button.prototype.name = 'spa-component-button';
 
 
 // time to apply "click" class, does not apply if 0

@@ -7,7 +7,8 @@
 
 'use strict';
 
-var Component = require('spa-component');
+var Component = require('spa-component'),
+    keys      = require('spa-keys');
 
 
 /**
@@ -121,11 +122,10 @@ Button.prototype.defaultEvents = {
     /**
      * Default method to handle keyboard keydown events.
      *
-     * @param {Event} event generated event
+     * @param {Object} event generated event
      */
     keydown: function ( event ) {
-        // enter
-        if ( event.keyCode === 13 ) {
+        if ( event.code === keys.enter ) {
             // emulate click
             // there are some listeners
             if ( this.events['click'] ) {

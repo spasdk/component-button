@@ -54,11 +54,19 @@ function Button ( config ) {
     console.assert(typeof this === 'object', 'must be constructed via new');
 
     if ( DEVELOP ) {
-        if ( typeof config !== 'object' ) { throw new Error(__filename + ': wrong config type'); }
+        if ( typeof config !== 'object' ) {
+            throw new Error(__filename + ': wrong config type');
+        }
         // init parameters checks
-        if ( config.className && typeof config.className !== 'string' ) { throw new Error(__filename + ': wrong or empty config.className'); }
-        if ( config.icon      && typeof config.icon      !== 'string' ) { throw new Error(__filename + ': wrong or empty config.icon'); }
-        if ( config.value     && typeof config.value     !== 'string' ) { throw new Error(__filename + ': wrong or empty config.value'); }
+        if ( 'className' in config && (!config.className || typeof config.className !== 'string') ) {
+            throw new Error(__filename + ': wrong or empty config.className');
+        }
+        if ( config.icon && typeof config.icon !== 'string' ) {
+            throw new Error(__filename + ': wrong or empty config.icon');
+        }
+        if ( config.value && typeof config.value !== 'string' ) {
+            throw new Error(__filename + ': wrong or empty config.value');
+        }
     }
 
     //config.name = 'spa-component-button' + (config.className || '');
